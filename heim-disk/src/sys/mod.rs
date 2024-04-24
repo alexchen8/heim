@@ -18,6 +18,10 @@ cfg_if::cfg_if! {
         mod macos;
 
         pub use self::macos::*;
+    } else if #[cfg(target_os = "ios")] {
+        mod macos;
+
+        pub use self::macos::*;
     } else {
         compile_error!("Unsupported OS");
     }

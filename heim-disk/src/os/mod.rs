@@ -12,6 +12,9 @@ pub mod unix;
 #[cfg(target_os = "macos")]
 pub mod macos;
 
+#[cfg(target_os = "ios")]
+pub mod macos;
+
 // TODO: Add `cfg(doc)` and make in render in any non-Windows OS
 #[cfg(target_os = "windows")]
 #[cfg_attr(docsrs, doc(cfg(target_os = "windows")))]
